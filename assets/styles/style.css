@@ -1,0 +1,63 @@
+* {
+    border: 1px dotted magenta;
+}
+
+/* Variables */
+
+:root {
+    /* Colors */
+    --color-dark: #070a13;
+    --color-light: #f1f5f9;
+
+    /* Numbers */
+    --dark-mode-transition-duration: 1s;
+}
+
+/* Elements */
+body {
+    transition: var(--dark-mode-transition-duration) ease;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+/* Classes */
+
+.centered-block {
+    width: 50%; /* Set a width */
+    margin: 0 auto; /* Horizontally center */
+}
+
+.dark-mode {
+    --color-dark: #f1f5f9;
+    --color-light: #070a13;
+}
+
+.toggleable-image {
+    transition: filter var(--dark-mode-transition-duration) ease; /* For smooth transitions */
+}
+
+.toggleable-image.inverted {
+    filter: invert(100%);
+}
+
+/* IDs */
+
+#output-field {
+    text-align: center; /* Centers the element */
+}
+
+#my-button {
+    display: block; /* Make it a block element */
+    margin: 0 auto; /* Centers the element */
+}
+
+#dark-mode-toggle {
+    box-sizing: content-box;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    height: 32px;
+    width: 32px;
+}
+
