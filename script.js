@@ -1,12 +1,5 @@
-let outputField;
-let darkModeToggle;
-let darkMode = false;
-
-
 window.onload = () => {
-    outputField = document.querySelector('#output-field');
-
-    darkModeToggle = document.querySelector('#dark-mode-toggle');
+    const darkModeToggle = document.querySelector('#dark-mode-toggle');
     darkModeToggle.addEventListener("click", handleDarkMode)
 
     const myButton = document.querySelector("#my-button");
@@ -14,6 +7,9 @@ window.onload = () => {
 }
 
 const handleDarkMode = () => {
+    const darkModeToggle = document.querySelector('#dark-mode-toggle');
+    let darkMode = false;
+
     document.body.classList.toggle('dark-mode');
 
     darkMode = !darkMode;
@@ -45,6 +41,7 @@ const fetchRandomFact = async () =>{
 
 const query = async () => {
     try {
+        const outputField = document.querySelector('#output-field');
         const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
             
         if(response.ok){
@@ -63,6 +60,8 @@ const query = async () => {
 }
 
 const displayOnOutputField = (string) => {
+    const outputField = document.querySelector('#output-field');
+
     try {
         outputField.innerHTML = string;
     } catch (err){
