@@ -1,9 +1,27 @@
+let outputField;
+let darkModeToggle;
+let darkMode = false;
+
 
 window.onload = () => {
-    const outputField = document.querySelector('#outputField');
-    const myButton = document.querySelector("#myButton");
-    
-        myButton.addEventListener("click", fetchRandomFact);
+    outputField = document.querySelector('#output-field');
+
+    darkModeToggle = document.querySelector('#dark-mode-toggle');
+    darkModeToggle.addEventListener("click", handleDarkMode)
+
+    const myButton = document.querySelector("#my-button");
+    myButton.addEventListener("click", fetchRandomFact);
+}
+
+const handleDarkMode = () => {
+    document.body.classList.toggle('dark-mode');
+
+    darkMode = !darkMode;
+    if (darkMode) {
+        darkModeToggle.classList.add('inverted');
+    } else {
+        darkModeToggle.classList.remove('inverted');
+    }
 }
 
 const fetchRandomFact = async () =>{
@@ -28,35 +46,21 @@ const fetchRandomFact = async () =>{
 const query = async () => {
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-            // .then(response => response.json())
-            // .then(json => console.log(json));
+            
         if(response.ok){
-            console.log("the API responded!");
             const jsonResponse = await response.json();
+            console.log(`JSONResponse: ${jsonResponse}`);
 
-            console.log(jsonResponse);
-    
             for(let field in jsonResponse)
             {   
-                console.log(jsonResponse[field]);
-                displayOnOutputField(field)
+                console.log(`${field}: ${jsonResponse[field]}`);
             }
-            // console.log(jsonResponse);
-
-            // let output = '';
-            // const rawJSON = {};
-            // for(let property in jsonResponse){
-            //     console.log(`${property}:${jsonResponse[property]}`);
-            //     output += `${property}:${jsonResponse[property]}<br>`;
-            // }
-            // displayOnOutputField(output);
         }
 
     } catch (error) {
         console.log(error);
     }
 }
-query();
 
 const displayOnOutputField = (string) => {
     try {
