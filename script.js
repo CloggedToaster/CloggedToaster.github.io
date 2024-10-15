@@ -4,6 +4,12 @@ window.onload = () => {
 
     const myButton = document.querySelector("#my-button");
     myButton.addEventListener("click", fetchRandomFact);
+    
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+        document.body.classList.add('darkMode');
+        handleDarkMode();
+    }
 }
 
 const handleDarkMode = () => {
@@ -17,6 +23,13 @@ const handleDarkMode = () => {
         darkModeToggle.classList.add('inverted');
     } else {
         darkModeToggle.classList.remove('inverted');
+    }
+
+
+    if (document.body.classList.contains('dark-mode')) { 
+        localStorage.setItem('theme', 'dark-mode');   
+    } else {
+        localStorage.removeItem('theme');
     }
 }
 
@@ -44,7 +57,7 @@ const query = async () => {
         const outputField = document.querySelector('#output-field');
         const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
             
-        if(response.ok){
+        if (response.ok) {
             const jsonResponse = await response.json();
             console.log(`JSONResponse: ${jsonResponse}`);
 
