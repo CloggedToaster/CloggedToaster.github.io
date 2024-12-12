@@ -1,104 +1,39 @@
-window.onload = () => {
-    const darkModeToggle = document.querySelector('#dark-mode-toggle');
-    darkModeToggle.addEventListener("click", handleDarkMode)
+let count = 0;
 
-    const myButton = document.querySelector("#my-button");
-    myButton.addEventListener("click", fetchRandomFact);
-    
-    const theme = localStorage.getItem('theme');
-    if (theme) {
-        document.body.classList.add('darkMode');
-        handleDarkMode();
-    }
-}
 
-const handleDarkMode = () => {
-    const darkModeToggle = document.querySelector('#dark-mode-toggle');
-    let darkMode = false;
+const numberDisplay = document.getElementById('numberDisplay');
+const minusButton = document.getElementById('minusButton');
+const plusButton = document.getElementById('plusButton');
 
-    document.body.classList.toggle('dark-mode');
+const updateDisplay = () => {
+    numberDisplay.textContent = count;
 
-    darkMode = !darkMode;
-    if (darkMode) {
-        darkModeToggle.classList.add('inverted');
+    if(count === 0) {
+        minusButton.style.display = 'none';
     } else {
-        darkModeToggle.classList.remove('inverted');
+        minusButton.style.display = 'flex';
     }
 
+}
+updateDisplay();
 
-    if (document.body.classList.contains('dark-mode')) { 
-        localStorage.setItem('theme', 'dark-mode');   
-    } else {
-        localStorage.removeItem('theme');
-    }
+
+const handlePlusButtonClick = () => {
+    count++;
+    console.log(count);
+    updateDisplay();
 }
 
-const fetchRandomFact = async () =>{
-    try {
-        const response = await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random");
-        if(!response.ok){
-            throw new Error('Network error!');
-        }
-        
-        const data = await response.json();
-        console.log(data);
-        console.log(data.text);
-
-        displayOnOutputField(data.text)
-
-    } catch (err) {
-        console.log(err);
-    }
+const handleMinusButtonClick = () => {
+    count--;
+    console.log(count);
+    updateDisplay();
 }
 
-
-const query = async () => {
-    try {
-        const outputField = document.querySelector('#output-field');
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-            
-        if (response.ok) {
-            const jsonResponse = await response.json();
-            console.log(`JSONResponse: ${jsonResponse}`);
-
-            for(let field in jsonResponse)
-            {   
-                console.log(`${field}: ${jsonResponse[field]}`);
-            }
-        }
-
-    } catch (error) {
-        console.log(error);
-    }
+const updateCountText = () => {
+    mainNumber.innerHTML = count;
 }
-
-const displayOnOutputField = (string) => {
-    const outputField = document.querySelector('#output-field');
-
-    try {
-        outputField.innerHTML = string;
-    } catch (err){
-        console.log(err);
-    }    
-}
-
-
-
-
-
-const miata = {
-    make: "mazda",
-    model: "mx-5 miata",
-    modelYear: 2024,
-    color: "red",
-    numberOfDoors: 2,
-    convertible: true,
-    features: ["heated seats", "premium audio", "all-weather package"],
-};
-
-const printMiataSpecs = () => {
-    for(let spec in miata){
-        console.log(`${spec}: ${miata[spec]}`);
-    }
-}
-
+  
+document.getElementById('plusButton').addEventListener('click', handlePlusButtonClick);
+document.getElementById('minusButton').addEventListener('click', handleMinusButtonClick);
+  
