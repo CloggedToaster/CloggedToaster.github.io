@@ -1,0 +1,117 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --back-ground-color: teal;
+    
+}
+
+
+
+body {
+    background-color: var(--back-ground-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+
+}
+
+.mainNumber {
+    color: white;
+    font-size: 40vw;
+
+    display: flex;
+}
+
+#minusButton {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    transform: translateY(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  #minusButton:hover {
+    background-color: #218838;
+  }
+  
+  #minusButton:active {
+    background-color: #1e7e34;
+  }
+
+#plusButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transform: translateY(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#plusButton:hover {
+    background-color: #218838;
+  }
+  
+  #plusButton:active {
+    background-color: #1e7e34;
+  }
+
+.space-mono-regular {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#numberDisplay {
+    font-size: 45vw;
+    text-align: center;
+
+    color: white;
+    flex-grow: 1; /* Pushes buttons to the sides */
+}

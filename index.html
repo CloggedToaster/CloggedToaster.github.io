@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta />
-        <title>Homepage</title>
-        <link rel="stylesheet" href="assets\styles\style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JustACounter</title>
 
-    </head>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="numberDisplay" class="">0</div>
 
-    <body>
-        
-        <div class="centered-block">
-            <p id="output-field">output field</p>
-            <button id="my-button">Get Random Fact!</button>
+    <button id="plusButton" class="space-mono-bold">
+        +
+    </button>
 
-			
-			<div>
-				<img class="toggleable-image" id="dark-mode-toggle" alt='image' src="assets\images\sun.png"></img>
-				<a target="_blank" href="https://icons8.com/icon/48579/sun">Sun</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-			</div>
-		</div>
-        
-		
+    <button id="minusButton" class="space-mono-bold">
+        -
+    </button>
 
-        <script src="script.js"></script>
-    </body>
 
-	<footer>
-		
-	</footer>
+    <script src="script.js"></script>
+</body>
 </html>
