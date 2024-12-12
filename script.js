@@ -5,6 +5,7 @@ window.onload = function() {
     const numberDisplay = document.getElementById('numberDisplay');
     const minusButton = document.getElementById('minusButton');
     const plusButton = document.getElementById('plusButton');
+    const resetButton = document.getElementById('resetButton');
 
     const updateDisplay = () => {
         numberDisplay.textContent = count;

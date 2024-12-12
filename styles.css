@@ -28,6 +28,31 @@ body {
     display: flex;
 }
 
+#resetButton {
+    position: fixed;
+    bottom: 20px;
+    transform: translateY(-50%);
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  #resetButton:hover {
+    background-color: #218838;
+  }
+  #resetButton:active {
+    background-color: #1e7e34;
+  }
+
 #minusButton {
     position: fixed;
     left: 20px;
@@ -37,8 +62,8 @@ body {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 20vw;
+    height: 20vw;
     font-size: 24px;
     display: flex;
     justify-content: center;
@@ -47,11 +72,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
   }
-  
   #minusButton:hover {
     background-color: #218838;
   }
-  
   #minusButton:active {
     background-color: #1e7e34;
   }
@@ -65,8 +88,8 @@ body {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 20vw;
+    height: 20vw;
     font-size: 24px;
     display: flex;
     justify-content: center;
@@ -75,11 +98,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
-
-#plusButton:hover {
+  #plusButton:hover {
     background-color: #218838;
   }
-  
   #plusButton:active {
     background-color: #1e7e34;
   }
