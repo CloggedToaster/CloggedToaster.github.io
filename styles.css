@@ -80,6 +80,28 @@ body {
     background-color: #1e7e34;
   }
 
+#resetButton {
+    position: fixed;
+    bottom: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  #resetButton:hover {
+    background-color: #218838;
+  }
+  #resetButton:active {
+    background-color: #1e7e34;
+  }
+
 .space-mono-regular {
     font-family: "Space Mono", serif;
     font-weight: 400;
