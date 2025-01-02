@@ -21,34 +21,22 @@ window.onload = function() {
     const handleResetButtonClick = () => {
         count = 0;
         updateDisplay();
-        storeValue();
     }
 
     const handlePlusButtonClick = () => {
         count++;
         updateDisplay();
-        storeValue();
     }
 
     const handleMinusButtonClick = () => {
         count--;
         updateDisplay();
-        storeValue();
     }
 
     const updateCountText = () => {
         mainNumber.innerHTML = count;
     }
 
-    const storeValue = () => {
-        localStorage.setItem("count", count);
-    }
-    const loadValue = () => {
-        if(localStorage.getItem("count")){
-            count = localStorage.getItem("count");
-        }        
-    }
-    loadValue();
     updateDisplay();
     
     document.getElementById('plusButton').addEventListener('click', handlePlusButtonClick);
