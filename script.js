@@ -17,25 +17,41 @@ window.onload = function() {
         }
 
     }
-    updateDisplay();
 
+    const handleResetButtonClick = () => {
+        count = 0;
+        updateDisplay();
+        storeValue();
+    }
 
     const handlePlusButtonClick = () => {
         count++;
-        console.log(count);
         updateDisplay();
+        storeValue();
     }
 
     const handleMinusButtonClick = () => {
         count--;
-        console.log(count);
         updateDisplay();
+        storeValue();
     }
 
     const updateCountText = () => {
         mainNumber.innerHTML = count;
     }
+
+    const storeValue = () => {
+        localStorage.setItem("count", count);
+    }
+    const loadValue = () => {
+        if(localStorage.getItem("count")){
+            count = localStorage.getItem("count");
+        }        
+    }
+    loadValue();
+    updateDisplay();
     
     document.getElementById('plusButton').addEventListener('click', handlePlusButtonClick);
     document.getElementById('minusButton').addEventListener('click', handleMinusButtonClick);
+    document.getElementById('resetButton').addEventListener('click', handleResetButtonClick);
 };
