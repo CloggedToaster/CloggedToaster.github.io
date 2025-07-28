@@ -12,7 +12,7 @@
 </head>
 <body>
     <div>
-        <h2 class="space-mono-bold">me rn</h2>
+        <h2 class="space-mono-bold">me rn | 07_24_2025</h2>
         <p class="space-mono-regular">
             The feeling may be mutual<br>
             but to what degree is it assured? Destruction?<br>
@@ -31,6 +31,7 @@
 
         <div class="space-mono-bold">
             <h3>Matches the vibe:</h2>
+            <p class="space-mono-regular">As an Amazon Associate, I can earn from qualifying purchases</p>
             <ul>
                 <li>
                     <a class="space-mono-regular" style="text-decoration:none;"
