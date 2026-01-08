@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Clogging the Toaster | Following the Breadcrumbs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h2 class="space-mono-bold">Stand | 12_29_2025</h2>
+        <p class="space-mono-regular">
+            Words on words on piece of paper<br>
+            Goals that I work towards -paid for labor<br>
+            Thinking of things I can't escape.<br>
+            Working while working - I took the bait<br>
+            <br>
+            Dwell, dwell on the words that I say<br>
+            Dwell on the calls that I take<br>
+            Dwell on the grades -automate<br>
+            Dwell on the past and hours amassed in this place<br>
+
+            
+        </p>
+
+        <div class="space-mono-bold">
+            <h3>Merch that probably matches the vibe</h3>
+            <p class="space-mono-regular">As an Amazon Associate, I can earn from qualifying purchases</p>
+            <ul>
+
+                <li>
+                    <a class="space-mono-regular" style="text-decoration:none;"
+                    href="https://amzn.to/3MOcPyH">A stand for laptops that stands</a>
+                </li>
+                <li>    
+                    <a class="space-mono-regular" style="text-decoration:none;"
+                    href="https://amzn.to/498h93a">
+                    A phone that proves size doesn't matter.
+                    </a>
+                </li>
+                <li>
+                    <a class="space-mono-regular" style="text-decoration:none;" 
+                    href="https://amzn.to/49bzdJF">Coffee makes the world go round!</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
