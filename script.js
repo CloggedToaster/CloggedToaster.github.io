@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
       alert("It worked!")
     }
 
-    if(event.shiftKey && event.key === "/") {
+    if(event.shiftKey && event.key === "?") {
       event.preventDefault();
       alert("SHIFT + Q");
     }
