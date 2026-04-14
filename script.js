@@ -4,5 +4,11 @@ window.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       alert("It worked!")
     }
+
+    if(event.shiftKey && event.key === "/") {
+      event.preventDefault();
+      alert("SHIFT + Q");
+    }
+
   });
 });
