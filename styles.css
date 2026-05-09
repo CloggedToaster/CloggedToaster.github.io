@@ -3,14 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --back-ground-color: teal;
-    
+    --back-ground-color: #006666;
+    --font-color: #e8e6e3;
 }
 
 
 
 body {
     background-color: var(--back-ground-color);
+    color: var(--font-color);
 
     display: flex;
     justify-content: center;
