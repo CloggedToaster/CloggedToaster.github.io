@@ -135,3 +135,15 @@ body {
     color: white;
     flex-grow: 1; /* Pushes buttons to the sides */
 }
+
+<!-- Navbar styles -->
+.nav-links a,
+.nav-links a:visited,
+.nav-links a:link {
+    color: var(--font-color);
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: var(--font-color);          /* Use parent text color */
+    text-decoration: none;   /* Remove underline */
+}
